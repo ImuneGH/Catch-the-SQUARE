@@ -52,7 +52,7 @@ function dotFall(topPosition)  {
                 topPosition += 15;                          // přičte k pozici 15
                 dot.style.top = `${topPosition}px`;         // posune kostku o 15px
                 console.log(topPosition);                   // kontrola pozice v logu
-                dotFall(topPosition);                       
+                dotFall(topPosition);                       // opakuje funkci s aktuální pozicí kostky
             }, difficultySpeed);                            // prodleva mezi posuny je dlouhá v závislosti na zvolené obtížnosti (kterou jsme uložili do proměnné dificultySpeed)
         }
         else    {
