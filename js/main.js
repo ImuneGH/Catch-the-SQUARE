@@ -11,13 +11,13 @@ function removeStartWindow()    {
 function difficultyChoice(difficulty) {
     switch (difficulty) {                                   // zjišťuje text ID z radio buttonů při výběru obtížnosti
         case "easy": 
-            difficultySpeed = 800;                          // přidá do proměnné difficultySpeed hodnotu 800
+            difficultySpeed = 15;                          // přidá do proměnné difficultySpeed hodnotu 800
             break;
         case "medium": 
-            difficultySpeed = 500;                          // přidá do proměnné difficultySpeed hodnotu 500
+            difficultySpeed = 10;                          // přidá do proměnné difficultySpeed hodnotu 500
             break;
         case "hard": 
-            difficultySpeed = 300;                          // přidá do proměnné difficultySpeed hodnotu 300
+            difficultySpeed = 5;                          // přidá do proměnné difficultySpeed hodnotu 300
             break;
     }
 }
@@ -49,7 +49,7 @@ function dotFall(topPosition)  {
     if(createGame.contains(dot))    {                       // podmínka kontroluje jestli se díky kliknutí na kostku kostka nesmazala (to by přerušilo funkci)
         if(topPosition <= 680)    {                         // podmínka zjišťuje, jestli už je pozice kostky na konci dráhy
             setTimeout(() => {                              // zajišťuje prodlevu mezi klesáním dolů (podle obtížnosti)
-                topPosition += 15;                          // přičte k pozici 15
+                topPosition += 0.5;                          // přičte k pozici 15
                 dot.style.top = `${topPosition}px`;         // posune kostku o 15px
                 console.log(topPosition);                   // kontrola pozice v logu
                 dotFall(topPosition);                       // opakuje funkci s aktuální pozicí kostky
